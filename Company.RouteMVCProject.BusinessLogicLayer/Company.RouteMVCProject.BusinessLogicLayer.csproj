@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Company.RouteMVCProject.DataAccessLayer\Company.RouteMVCProject.DataAccessLayer.csproj" />
+  </ItemGroup>
+
 </Project>
