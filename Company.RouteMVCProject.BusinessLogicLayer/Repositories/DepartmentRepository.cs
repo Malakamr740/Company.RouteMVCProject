@@ -6,7 +6,7 @@ using Company.RouteMVCProject.DataAccessLayer.Models;
 
 namespace Company.RouteMVCProject.BusinessLogicLayer.Repositories
 {
-    internal class DepartmentRepository : IDepartmentRepository
+    public class DepartmentRepository : IDepartmentRepository
     {
         private readonly CompanyDBContext context;
         public IEnumerable<Department> GetAll()

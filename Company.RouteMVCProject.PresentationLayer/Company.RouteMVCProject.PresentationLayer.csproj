@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Company.RouteMVCProject.BusinessLogicLayer\Company.RouteMVCProject.BusinessLogicLayer.csproj" />
+  </ItemGroup>
+
 </Project>
