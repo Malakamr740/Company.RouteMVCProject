@@ -1,3 +1,9 @@
+using Company.RouteMVCProject.BusinessLogicLayer.Interfaces;
+using Company.RouteMVCProject.BusinessLogicLayer.Repositories;
+using Company.RouteMVCProject.DataAccessLayer.Data.Contexts;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
 namespace Company.RouteMVCProject.PresentationLayer
 {
     public class Program
@@ -8,7 +14,12 @@ namespace Company.RouteMVCProject.PresentationLayer
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<IDepartmentRepository,DepartmentRepository>();
+            builder.Services.AddDbContext<CompanyDBContext>(options => {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+                //options.UseSqlServer("Server = . ; Database = CompanyRoute ; Trusted_Connection = true ; TrustServerCertificate = True");
 
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
