@@ -1,6 +1,4 @@
-﻿
-
-using Company.RouteMVCProject.BusinessLogicLayer.Interfaces;
+﻿using Company.RouteMVCProject.BusinessLogicLayer.Interfaces;
 using Company.RouteMVCProject.DataAccessLayer.Data.Contexts;
 using Company.RouteMVCProject.DataAccessLayer.Models;
 
@@ -9,6 +7,10 @@ namespace Company.RouteMVCProject.BusinessLogicLayer.Repositories
     public class DepartmentRepository : IDepartmentRepository
     {
         private readonly CompanyDBContext context;
+        public DepartmentRepository(CompanyDBContext _context )
+        {
+            context = _context;
+        }
         public IEnumerable<Department> GetAll()
         {
            return context.departments.ToList();

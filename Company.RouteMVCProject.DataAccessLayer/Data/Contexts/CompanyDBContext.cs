@@ -7,7 +7,8 @@ namespace Company.RouteMVCProject.DataAccessLayer.Data.Contexts
 {
     public class CompanyDBContext : DbContext
     {
-        public CompanyDBContext() : base()
+        
+        public CompanyDBContext(DbContextOptions<CompanyDBContext> options) : base(options)
         {
             
         }
@@ -16,12 +17,13 @@ namespace Company.RouteMVCProject.DataAccessLayer.Data.Contexts
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server = . ; Database = CompanyRoute ; Trusted_Connection = true ; TrustServerCertificate = True");
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
 
+        //    optionsBuilder.UseSqlServer("Server = . ; Database = CompanyRoute ; Trusted_Connection = true ; TrustServerCertificate = True");
 
-        }
+        //}
         public DbSet<Department> departments { get; set; }
     }
 }
+ 
