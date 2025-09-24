@@ -1,5 +1,5 @@
 using System.Diagnostics;
-using Company.RouteMVCProject.PresentationLayer.Models;
+using Company.RouteMVCProject.PresentationLayer.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Company.RouteMVCProject.PresentationLayer.Controllers
@@ -26,6 +26,7 @@ namespace Company.RouteMVCProject.PresentationLayer.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
+
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
