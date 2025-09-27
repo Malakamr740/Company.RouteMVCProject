@@ -1,5 +1,4 @@
-﻿
-using Company.RouteMVCProject.DataAccessLayer.Models;
+﻿using Company.RouteMVCProject.DataAccessLayer.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 

@@ -10,5 +10,5 @@ namespace Company.RouteMVCProject.BusinessLogicLayer.Interfaces
         public int update(Department model);
         public int Delete(Department model);
         
-    }
+    }    
 }
