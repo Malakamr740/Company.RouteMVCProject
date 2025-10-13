@@ -52,7 +52,7 @@ namespace Company.RouteMVCProject.PresentationLayer.Controllers
 
         [HttpGet]
         public IActionResult Details(int? id , string viewName = "Details")
-        {
+         {
             if (id is null)
             {
                 return BadRequest("Invalid Id");
