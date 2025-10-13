@@ -14,6 +14,7 @@ namespace Company.RouteMVCProject.DataAccessLayer.Data.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            base.OnModelCreating(modelBuilder);
         }
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -23,6 +24,7 @@ namespace Company.RouteMVCProject.DataAccessLayer.Data.Contexts
 
         //}
         public DbSet<Department> departments { get; set; }
+        public DbSet<Employee> employees { get; set; }
     }
 }
  
