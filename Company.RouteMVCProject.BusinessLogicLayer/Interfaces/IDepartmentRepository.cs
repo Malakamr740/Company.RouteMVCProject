@@ -2,13 +2,13 @@
 
 namespace Company.RouteMVCProject.BusinessLogicLayer.Interfaces
 {
-    public interface IDepartmentRepository
+    public interface IDepartmentRepository : IGenericRepository<Department>
     {
-        public IEnumerable<Department> GetAll();
-        public Department? Get(int id);
-        public int Add(Department model);
-        public int Update(Department model);
-        public int Delete(Department model);
+        //public IEnumerable<Department> GetAll();
+        //public Department? Get(int id);
+        //public int Add(Department model);
+        //public int Update(Department model);
+        //public int Delete(Department model);
         
     }    
 }
