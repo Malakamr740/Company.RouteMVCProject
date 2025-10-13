@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace Company.RouteMVCProject.BusinessLogicLayer.Interfaces
 {
-    public interface IEmployeeRepository
+    public interface IEmployeeRepository : IGenericRepository<Employee>
     {
-        public IEnumerable<Employee> GetAll();
-        public Employee? Get(int id);
-        public int Add(Employee model);
-        public int Update(Employee model);
-        public int Delete(Employee model);
+        //Employee? GetByName(string Name);
+        //public IEnumerable<Employee> GetAll();
+        //public Employee? Get(int id);
+        //public int Add(Employee model);
+        //public int Update(Employee model);
+        //public int Delete(Employee model);
 
     }
 }

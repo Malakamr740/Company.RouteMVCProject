@@ -4,38 +4,36 @@ using Company.RouteMVCProject.DataAccessLayer.Models;
 
 namespace Company.RouteMVCProject.BusinessLogicLayer.Repositories
 {
-    public class DepartmentRepository : IDepartmentRepository
+    public class DepartmentRepository :GenericRepository<Department>, IDepartmentRepository
     {
-        private readonly CompanyDBContext context;
-        public DepartmentRepository(CompanyDBContext _context )
+        private readonly CompanyDBContext _context;
+        public DepartmentRepository(CompanyDBContext context) : base(context)
         {
-            context = _context;
         }
-        public IEnumerable<Department> GetAll()
-        {
-           return context.departments.ToList();
-        }
-        public Department? Get(int id)
-        {
-            return context.departments.Find(id);
-        }
+        //public IEnumerable<Department> GetAll()
+        //{
+        //   return context.departments.ToList();
+        //public Department? Get(int id)
+        //{
+        //    return context.departments.Find(id);
+        //}
 
-        public int Add(Department model)
-        {
-            context.departments.Add(model);
-            return context.SaveChanges();
-        }
-        public int Update(Department model)
-        {
-            context.departments.Update(model);
-            return context.SaveChanges();
-        }
+        //public int Add(Department model)
+        //{
+        //    context.departments.Add(model);
+        //    return context.SaveChanges();
+        //}
+        //public int Update(Department model)
+        //{
+        //    context.departments.Update(model);
+        //    return context.SaveChanges();
+        //}
 
-        public int Delete(Department model)
-        {
-            context.departments.Remove(model);
-            return context.SaveChanges();
-        }
+        //public int Delete(Department model)
+        //{
+        //    context.departments.Remove(model);
+        //    return context.SaveChanges();
+        //}
 
 
     }
