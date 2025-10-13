@@ -7,7 +7,7 @@ namespace Company.RouteMVCProject.BusinessLogicLayer.Interfaces
         public IEnumerable<Department> GetAll();
         public Department? Get(int id);
         public int Add(Department model);
-        public int update(Department model);
+        public int Update(Department model);
         public int Delete(Department model);
         
     }    
