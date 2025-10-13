@@ -25,7 +25,7 @@ namespace Company.RouteMVCProject.BusinessLogicLayer.Repositories
             context.departments.Add(model);
             return context.SaveChanges();
         }
-        public int update(Department model)
+        public int Update(Department model)
         {
             context.departments.Update(model);
             return context.SaveChanges();
